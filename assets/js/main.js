@@ -46,8 +46,8 @@
 							'images/5.jpg': 'center',
 							// 'images/6.JPG': 'center',
 							// 'images/7.JPG': 'center',
-							'images/8.JPG': 'center',
-							'images/9.png': 'center'
+							'images/8.jpg': 'center',
+							'images/9.jpg': 'center'
 							// 'images/soffa.jpg': 'center'
 						},
 
