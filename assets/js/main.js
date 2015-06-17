@@ -47,7 +47,7 @@
 							// 'images/6.JPG': 'center',
 							// 'images/7.JPG': 'center',
 							'images/8.jpg': 'center',
-							'images/9.jpg': 'center'
+							'images/9.png': 'center'
 							// 'images/soffa.jpg': 'center'
 						},
 
