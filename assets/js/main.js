@@ -40,14 +40,14 @@
 					// Images (in the format of 'url': 'alignment').
 						images: {
 							'images/bg01.jpg': 'center',
-							'images/bg02.jpg': 'center',
-							// 'images/bg03.jpg': 'center',
 							// 'images/4.jpg': 'center',
 							'images/5.jpg': 'center',
 							// 'images/6.JPG': 'center',
 							// 'images/7.JPG': 'center',
 							'images/8.jpg': 'center',
-							'images/9.png': 'center'
+							'images/9.jpg': 'center',
+							// 'images/bg03.jpg': 'center',
+							'images/bg02.jpg': 'center',
 							// 'images/soffa.jpg': 'center'
 						},
 

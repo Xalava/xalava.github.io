@@ -1105,7 +1105,7 @@
 		-webkit-transition: opacity 0.5s ease-in-out;
 		-ms-transition: opacity 0.5s ease-in-out;
 		transition: opacity 0.5s ease-in-out;
-		bottom: 12em;
+		bottom: 10em;
 		color: rgba(255, 255, 255, 0.9);
 		left: 2em;
 		opacity: 0.6;
@@ -1154,7 +1154,7 @@
 		@media screen and (max-width: 1680px) {
 
 			#footer {
-				bottom: 6em;
+				bottom: 5em;
 				/*left: 3.5em;*/
 
 			}
@@ -1173,7 +1173,7 @@
 		@media screen and (max-width: 360px) {
 
 			#footer {
-				bottom: 2em;
+				bottom: 3em;
 				/*left: 1.25em;*/
 			}
 
