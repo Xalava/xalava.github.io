@@ -591,6 +591,26 @@
 		margin: 0 0 2em 0;
 	}
 
+/*	.LI-profile-badge {
+				
+
+	}*/
+
+	.LI-profile-badge {
+    /*float: right;*/
+}
+.badge {
+    position: static;
+   
+}
+.LI-profile-badge {
+
+    position: absolute;
+    right: 13rem;
+    top:30vh;
+   }
+
+
 		form .message {
 			text-decoration: none;
 			-moz-transition: opacity 0.2s ease-in-out, -moz-transform 0.2s ease-in-out;
@@ -1008,6 +1028,9 @@
 		}
 
 /* Header */
+	#header {
+		max-width: 60vw;
+	}
 
 	#header h1 {
 		font-size: 3.25em;
