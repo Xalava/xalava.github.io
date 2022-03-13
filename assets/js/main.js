@@ -1,12 +1,14 @@
 /*
 	Eventually by HTML5 UP
-	html5up.net | @n33co
+	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 (function() {
 
 	"use strict";
+
+	var	$body = document.querySelector('body');
 
 	// Methods/polyfills.
 
@@ -19,15 +21,10 @@
 		// window.addEventListener
 			(function(){if("addEventListener"in window)return;window.addEventListener=function(type,f){window.attachEvent("on"+type,f)}})();
 
-	// Vars.
-		var	$body = document.querySelector('body');
-
-	// Disable animations/transitions until everything's loaded.
-		$body.classList.add('is-loading');
-
+	// Play initial animations on page load.
 		window.addEventListener('load', function() {
 			window.setTimeout(function() {
-				$body.classList.remove('is-loading');
+				$body.classList.remove('is-preload');
 			}, 100);
 		});
 
@@ -47,7 +44,8 @@
 							'images/8.jpg': 'center',
 							'images/9.jpg': 'center',
 							// 'images/bg03.jpg': 'center',
-							'images/bg02.jpg': 'center',
+							// 'images/bg02.jpg': 'center',
+							'images/conference-digital-assets-sovereignty-Xavier-Lavayssiere.jpg':'center',
 							// 'images/soffa.jpg': 'center'
 						},
 
@@ -112,70 +110,70 @@
 		})();
 
 	// Signup Form.
-		(function() {
+		// (function() {
 
-			// Vars.
-				var $form = document.querySelectorAll('#signup-form')[0],
-					$submit = document.querySelectorAll('#signup-form input[type="submit"]')[0],
-					$message;
+		// 	// Vars.
+		// 		var $form = document.querySelectorAll('#signup-form')[0],
+		// 			$submit = document.querySelectorAll('#signup-form input[type="submit"]')[0],
+		// 			$message;
 
-			// Bail if addEventListener isn't supported.
-				if (!('addEventListener' in $form))
-					return;
+		// 	// Bail if addEventListener isn't supported.
+		// 		if (!('addEventListener' in $form))
+		// 			return;
 
-			// Message.
-				$message = document.createElement('span');
-					$message.classList.add('message');
-					$form.appendChild($message);
+		// 	// Message.
+		// 		$message = document.createElement('span');
+		// 			$message.classList.add('message');
+		// 			$form.appendChild($message);
 
-				$message._show = function(type, text) {
+		// 		$message._show = function(type, text) {
 
-					$message.innerHTML = text;
-					$message.classList.add(type);
-					$message.classList.add('visible');
+		// 			$message.innerHTML = text;
+		// 			$message.classList.add(type);
+		// 			$message.classList.add('visible');
 
-					window.setTimeout(function() {
-						$message._hide();
-					}, 3000);
+		// 			window.setTimeout(function() {
+		// 				$message._hide();
+		// 			}, 3000);
 
-				};
+		// 		};
 
-				$message._hide = function() {
-					$message.classList.remove('visible');
-				};
+		// 		$message._hide = function() {
+		// 			$message.classList.remove('visible');
+		// 		};
 
-			// Events.
-			// Note: If you're *not* using AJAX, get rid of this event listener.
-				$form.addEventListener('submit', function(event) {
+		// 	// Events.
+		// 	// Note: If you're *not* using AJAX, get rid of this event listener.
+		// 		$form.addEventListener('submit', function(event) {
 
-					event.stopPropagation();
-					event.preventDefault();
+		// 			event.stopPropagation();
+		// 			event.preventDefault();
 
-					// Hide message.
-						$message._hide();
+		// 			// Hide message.
+		// 				$message._hide();
 
-					// Disable submit.
-						$submit.disabled = true;
+		// 			// Disable submit.
+		// 				$submit.disabled = true;
 
-					// Process form.
-					// Note: Doesn't actually do anything yet (other than report back with a "thank you"),
-					// but there's enough here to piece together a working AJAX submission call that does.
-						window.setTimeout(function() {
+		// 			// Process form.
+		// 			// Note: Doesn't actually do anything yet (other than report back with a "thank you"),
+		// 			// but there's enough here to piece together a working AJAX submission call that does.
+		// 				window.setTimeout(function() {
 
-							// Reset form.
-								$form.reset();
+		// 					// Reset form.
+		// 						$form.reset();
 
-							// Enable submit.
-								$submit.disabled = false;
+		// 					// Enable submit.
+		// 						$submit.disabled = false;
 
-							// Show message.
-								$message._show('success', 'Thank you!');
-								//$message._show('failure', 'Something went wrong. Please try again.');
+		// 					// Show message.
+		// 						$message._show('success', 'Thank you!');
+		// 						//$message._show('failure', 'Something went wrong. Please try again.');
 
-						}, 750);
+		// 				}, 750);
 
-				});
+		// 		});
 
-		})();
+		// })();
 
 })();
