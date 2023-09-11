@@ -32,27 +32,35 @@
 		(function() {
 
 			// Settings.
-				var settings = {
+			// Images (in the format of 'url': 'alignment').
+			var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+			let images = {}
+			let delay = 4000
+			if (width < 768) {
+				// small screens
+				images = {
+					'images/bg01.jpg': 'center',
+					'images/Regulation-Web3-REG3.webp': 'center',
+					'images/stablecoins-interview.webp': 'center',
+					'images/xavier-stablecoin-summit.webp': 'center',
+					'images/CNAM-Amphitheater.webp': 'center',
+					'images/haciendas.webp': 'center',
+					'images/conference-digital-assets-sovereignty-small.webp': 'left',
+				}
+			} else {
+				// bigger screens
+				images = {
+					'images/bg01.jpg': 'center',
+					'images/stablecoins-interview.webp': 'center',
+					'images/conference-digital-assets-sovereignty.webp': 'left',
+					'images/CNAM-Amphitheater.webp': 'center',
+					'images/c-haciendas-reg3.webp': 'right',
+					'images/c-stable-bnf.webp': 'center',
+					'images/c-social.webp': 'left',
+				}
+			}
 
-					// Images (in the format of 'url': 'alignment').
-						images: {
-							'images/bg01.jpg': 'center',
-							// 'images/4.jpg': 'center',
-							'images/5.jpg': 'center',
-							// 'images/6.JPG': 'center',
-							// 'images/7.JPG': 'center',
-							'images/8.jpg': 'center',
-							'images/9.jpg': 'center',
-							// 'images/bg03.jpg': 'center',
-							// 'images/bg02.jpg': 'center',
-							'images/conference-digital-assets-sovereignty-Xavier-Lavayssiere.jpg':'center',
-							// 'images/soffa.jpg': 'center'
-						},
-
-					// Delay.
-						delay: 6000
-
-				};
+				
 
 			// Vars.
 				var	pos = 0, lastPos = 0,
@@ -64,12 +72,12 @@
 					$wrapper.id = 'bg';
 					$body.appendChild($wrapper);
 
-				for (k in settings.images) {
+				for (k in images) {
 
 					// Create BG.
 						$bg = document.createElement('div');
 							$bg.style.backgroundImage = 'url("' + k + '")';
-							$bg.style.backgroundPosition = settings.images[k];
+							$bg.style.backgroundPosition = images[k];
 							$wrapper.appendChild($bg);
 
 					// Add it to array.
@@ -103,77 +111,10 @@
 					// Hide last image after a short delay.
 						window.setTimeout(function() {
 							$bgs[lastPos].classList.remove('visible');
-						}, settings.delay / 2);
+						}, delay / 2);
 
-				}, settings.delay);
+				}, delay);
 
 		})();
-
-	// Signup Form.
-		// (function() {
-
-		// 	// Vars.
-		// 		var $form = document.querySelectorAll('#signup-form')[0],
-		// 			$submit = document.querySelectorAll('#signup-form input[type="submit"]')[0],
-		// 			$message;
-
-		// 	// Bail if addEventListener isn't supported.
-		// 		if (!('addEventListener' in $form))
-		// 			return;
-
-		// 	// Message.
-		// 		$message = document.createElement('span');
-		// 			$message.classList.add('message');
-		// 			$form.appendChild($message);
-
-		// 		$message._show = function(type, text) {
-
-		// 			$message.innerHTML = text;
-		// 			$message.classList.add(type);
-		// 			$message.classList.add('visible');
-
-		// 			window.setTimeout(function() {
-		// 				$message._hide();
-		// 			}, 3000);
-
-		// 		};
-
-		// 		$message._hide = function() {
-		// 			$message.classList.remove('visible');
-		// 		};
-
-		// 	// Events.
-		// 	// Note: If you're *not* using AJAX, get rid of this event listener.
-		// 		$form.addEventListener('submit', function(event) {
-
-		// 			event.stopPropagation();
-		// 			event.preventDefault();
-
-		// 			// Hide message.
-		// 				$message._hide();
-
-		// 			// Disable submit.
-		// 				$submit.disabled = true;
-
-		// 			// Process form.
-		// 			// Note: Doesn't actually do anything yet (other than report back with a "thank you"),
-		// 			// but there's enough here to piece together a working AJAX submission call that does.
-		// 				window.setTimeout(function() {
-
-		// 					// Reset form.
-		// 						$form.reset();
-
-		// 					// Enable submit.
-		// 						$submit.disabled = false;
-
-		// 					// Show message.
-		// 						$message._show('success', 'Thank you!');
-		// 						//$message._show('failure', 'Something went wrong. Please try again.');
-
-		// 				}, 750);
-
-		// 		});
-
-		// })();
 
 })();
