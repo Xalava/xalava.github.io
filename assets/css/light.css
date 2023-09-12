@@ -1,9 +1,15 @@
+html, body {
+  height:100%;
+}
+
 body {
 	/* Style */
 	background-color: #1C5F7C;
 	color: rgba(255, 255, 255, 0.9);
 	font-family: "Roboto", sans-serif;
+	/* Structure */
 	margin: 0;
+	box-sizing: border-box;
 	/* Background  */
 	background-size: cover;
 	background-position: center center;
@@ -12,7 +18,6 @@ body {
 	animation: changeBackgroundImage 33s infinite;
 	animation-timing-function: linear;
 	animation-delay: 0s;
-
 }
 
 .container{
@@ -32,11 +37,8 @@ body {
 		-moz-justify-content: flex-end;
 		-webkit-justify-content: flex-end;
 		-ms-justify-content: flex-end;
-	height: 100vh;
 	box-sizing: border-box;
-
-	background-color: rgba(0, 0, 0, 0.7);
-							
+	background-color: rgba(0, 0, 0, 0.7);						
 }
 
 header, footer {
