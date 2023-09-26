@@ -3,7 +3,7 @@ html, body {
 }
 
 body {
-	/* Style */
+	/* Overall tyle */
 	background-color: #1C5F7C;
 	color: rgba(255, 255, 255, 0.9);
 	font-family: "Roboto", sans-serif;
@@ -38,11 +38,12 @@ body {
 		-webkit-justify-content: flex-end;
 		-ms-justify-content: flex-end;
 	box-sizing: border-box;
+	/* Style */
 	background-color: rgba(0, 0, 0, 0.7);						
 }
 
 header, footer {
-	/* For testing */
+	/* For testing: */
 	/* border: 2px solid orange ; */
 	max-width: 61vw;
 }
@@ -51,6 +52,18 @@ header {
 	max-width: 61vw;
 	color: white;
 }
+
+span {
+	transition: color 1s ease-in-out;
+}
+
+	.maj:hover {
+		color: #1cb495;
+	}
+
+	.min:hover {
+		color: #ff9a6b;
+	}
 
 header p {
 	color: rgba(255, 255, 255, 0.5);
@@ -63,10 +76,11 @@ footer{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	transition: opacity 1.5s ease-in-out;
+	transition: opacity 1s ease-in-out;
 	opacity: 0.6;
 	font-size: 2.2em;
 }
+
 	footer:hover {
 		opacity: 1;
 	}
@@ -84,16 +98,6 @@ svg {
 
 .label {
 	display: none;
-}
-
-
-/* Text */
-.maj:hover {
-	color: #1cb495;
-}
-
-.min:hover {
-	color: #ff9a6b;
 }
 
 a {
