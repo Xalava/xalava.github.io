@@ -1,55 +1,45 @@
+@font-face {
+	font-family: 'roboto';
+	font-display: swap;
+	src: url('/assets/fonts/roboto-regular.woff2') format('woff2'), url('/assets/fonts/roboto-regular.ttf') format('truetype');
+	unicode-range: U+000-5FF;
+}
+
 html, body {
-  height:100%;
+	height: 100%;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 body {
-	/* Overall tyle */
 	background-color: #1C5F7C;
 	color: rgba(255, 255, 255, 0.9);
 	font-family: "Roboto", sans-serif;
-	/* Structure */
-	margin: 0;
-	box-sizing: border-box;
-	/* Background  */
+	padding: 0;
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	animation: changeBackgroundImage 33s infinite;
-	animation-timing-function: linear;
+	animation: changeBackgroundImage 33s infinite linear;
 	animation-delay: 0s;
 }
 
-.container{
-	/* Structure */
-	margin:0;
+.container {
+	margin: 0;
 	height: 100%;
 	padding: 4em 2.5em;
 	display: flex;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-	flex-direction: column; 
-		-moz-flex-direction: column;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
+	flex-direction: column;
 	justify-content: flex-end;
-		-moz-justify-content: flex-end;
-		-webkit-justify-content: flex-end;
-		-ms-justify-content: flex-end;
 	box-sizing: border-box;
-	/* Style */
-	background-color: rgba(0, 0, 0, 0.7);						
+	background-color: rgba(0, 0, 0, 0.7);
 }
 
 header, footer {
-	/* For testing: */
-	/* border: 2px solid orange ; */
 	max-width: 61vw;
 }
 
 header {
-	max-width: 61vw;
 	color: white;
 }
 
@@ -57,20 +47,16 @@ span {
 	transition: color 1s ease-in-out;
 }
 
-	.maj:hover {
-		color: #1cb495;
-	}
-
-	.min:hover {
-		color: #ff9a6b;
-	}
+span:hover {
+	color: #1cb495;
+}
 
 header p {
 	color: rgba(255, 255, 255, 0.5);
 	line-height: 1.6;
 }
 
-footer{
+footer {
 	max-width: 59vw;
 	margin-top: 1.4rem;
 	display: flex;
@@ -81,19 +67,18 @@ footer{
 	font-size: 2.2em;
 }
 
-	footer:hover {
-		opacity: 1;
-	}
+footer:hover {
+	opacity: 1;
+}
 
 svg {
 	fill: rgba(255, 255, 255, 0.9);
 	text-decoration: none;
 }
 
-
 .icon {
 	height: 1em;
-	width: 1em; 
+	width: 1em;
 }
 
 .label {
@@ -101,23 +86,20 @@ svg {
 }
 
 a {
-	-moz-transition: border-bottom-color 0.2s ease, color 0.2s ease;
-	-webkit-transition: border-bottom-color 0.2s ease, color 0.2s ease;
-	-ms-transition: border-bottom-color 0.2s ease, color 0.2s ease;
 	transition: border-bottom-color 0.2s ease, color 0.2s ease;
 	border-bottom: dotted 1px rgba(255, 255, 255, 0.25);
 	color: #1cb495;
 	text-decoration: none;
-	border:none;
+	border: none;
 }
-	a:hover {
-		border-bottom-color: transparent;
-		color: #1cb495 ;
-		text-decoration: none;
-	}
 
-/* Responsive */
-@media only screen and (min-width: 600px) and (max-width: 1279px){
+a:hover {
+	border-bottom-color: transparent;
+	color: #1cb495;
+	text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1279px) {
 	body {
 		font-size: 1.6em;
 	}
@@ -129,8 +111,7 @@ a {
 	}
 }
 
-@media only screen and (min-width: 1280px)   {
-
+@media only screen and (min-width: 1280px) {
 	body {
 		font-size: 2em;
 	}
@@ -147,17 +128,17 @@ a {
 		background-image: url('../../images/bg01.jpg');
 		background-position: left center;
 	}
-	14.999%{
+	14.999% {
 		background-image: url('../../images/bg01.jpg');
 		background-position: 30% center;
 	}
 	15% {
 		background-image: url('../../images/Regulation-Web3-REG3.webp');
-			background-position: left center;
+		background-position: left center;
 	}
-	29.999%{
-		 background-image: url('../../images/Regulation-Web3-REG3.webp');
-		 background-position: center center;
+	29.999% {
+		background-image: url('../../images/Regulation-Web3-REG3.webp');
+		background-position: center center;
 	}
 	30% {
 		background-image: url('../../images/stablecoins-interview.webp');
@@ -171,7 +152,7 @@ a {
 		background-image: url('../../images/CNAM-Amphitheater.webp');
 		background-position: 50% center;
 	}
-	54.999%{
+	54.999% {
 		background-image: url('../../images/CNAM-Amphitheater.webp');
 		background-position: 40% center;
 	}
@@ -179,7 +160,7 @@ a {
 		background-image: url('../../images/xavier-stablecoin-summit.webp');
 		background-position: left center;
 	}
-	64.999%{
+	64.999% {
 		background-image: url('../../images/xavier-stablecoin-summit.webp');
 		background-position: 45% center;
 	}
@@ -187,7 +168,7 @@ a {
 		background-image: url('../../images/haciendas.webp');
 		background-position: 38% center;
 	}
-	74.999%{
+	74.999% {
 		background-image: url('../../images/haciendas.webp');
 		background-position: 55% center;
 	}
