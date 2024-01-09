@@ -1,8 +1,9 @@
-Personnal portfolio placeholder for Xavier Lavayssière
+Personal page for Xavier Lavayssière
 
-	Design is under Creative Commons 3.0 Attribution License 
-	Pictures are under under copyright by their original authors
-	Text content is probably under French droit d'auteur, especially typos 
+	Initial design is under the Creative Commons 3.0 Attribution License.
+	Pictures are copyrighted by their original authors.
+	Text content is protected under French droit d'auteur, especially typos.
+ 
 
 Credits:
 	Design & structure
