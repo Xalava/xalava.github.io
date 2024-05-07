@@ -99,6 +99,21 @@ a:hover {
 	text-decoration: none;
 }
 
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+#dot {
+	color: #BC965E;
+	font-size: 0.6em;
+	animation: fadeIn 5s ease forwards;
+}
+
 @media only screen and (min-width: 600px) and (max-width: 1279px) {
 	body {
 		font-size: 1.6em;
