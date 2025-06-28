@@ -2,6 +2,16 @@ html, body {
 	height: 100%;
 	margin: 0;
 	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+* {
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+	display: none;
 }
 
 body {
@@ -18,40 +28,33 @@ body {
 
 .container {
 	margin: 0;
-	height: 100%;
-	padding: 4em 2.5em;
+	min-height: 100vh;
+	padding: 2.5em 2.5em;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
 	box-sizing: border-box;
 	background-color: rgba(0, 0, 0, 0.7);
 }
 
-header, footer {
-	max-width: 61vw;
-}
-
 header {
+	max-width: 61vw;
+	margin-top: calc(100vh - 11em);
 	color: white;
 }
 
-span {
-	transition: color 1s ease-in-out;
+main {
+	max-width: 61vw;
 }
 
-span:hover {
-	color: #1cb495;
-}
 
 p {
-	color: rgba(255, 255, 255, 0.5);
+	color: rgba(255, 255, 255, 0.7);
 	line-height: 1.6;
 }
 
-summary {
-	color: rgba(188, 150, 94, 0.8);
-	opacity: 0;
-	animation: fadeIn 5s ease-in 15s forwards;
+
+#bio-text {
+	font-size: 0.9em;
 }
 
 footer {
@@ -61,60 +64,96 @@ footer {
 	flex-direction: row;
 	justify-content: space-between;
 	transition: opacity 1s ease-in-out;
-	opacity: 0.6;
+	opacity: 0.8;
 	font-size: 2.2em;
 }
 
-footer:hover {
-	opacity: 1;
-}
 
 svg {
-	fill: rgba(255, 255, 255, 0.9);
+	fill: rgba(255, 255, 255, 1);
 	text-decoration: none;
 }
 
 .icon {
 	height: 1em;
 	width: 1em;
+	opacity: 0.8;
 }
+
+.icon:hover {
+	opacity: 1;
+}
+
 
 .label {
 	display: none;
 }
 
-a {
-	transition: border-bottom-color 0.2s ease, color 0.2s ease;
-	border-bottom: dotted 1px rgba(255, 255, 255, 0.25);
-	color: #1cb495;
-	text-decoration: none;
-	border: none;
-}
-
-a:hover {
-	border-bottom-color: transparent;
-	color: #1cb495;
-	text-decoration: none;
-}
 
 @keyframes fadeIn {
 	from {
 		opacity: 0;
 	}
+
 	to {
 		opacity: 1;
 	}
 }
 
-#dot {
+#maindot {
 	color: #BC965E;
 	font-size: 0.6em;
+	margin-left: 0.2em;
 	animation: fadeIn 5s ease forwards;
 }
 
-@media only screen and (max-height: 800px)  {
-	details  {
-		display: none;
+.dot {
+	animation: dotColorChange 10s forwards;
+}
+
+@keyframes dotColorChange {
+	from {
+		color: inherit;
+	}
+
+	to {
+		color: #b19773;
+	}
+}
+
+@media only screen and (max-width: 399px) {
+	body {
+		font-size: 1.15em;
+	}
+
+	header {
+		max-width: 70vw;
+		margin-top: calc(100vh - 16em);
+
+	}
+
+	main {
+		max-width: 70vw;
+	}
+
+	footer {
+		font-size: 1.6em;
+		max-width: 8em;
+	}
+}
+
+@media only screen and (min-width: 400px) and (max-width: 599px) {
+	body {
+		font-size: 1.2em;
+	}
+
+	header {
+		margin-top: calc(100vh - 16.5em);
+	}
+
+	footer {
+		font-size: 1.5em;
+		max-width: 8em;
 	}
 }
 
@@ -145,62 +184,77 @@ a:hover {
 		background-image: url('../../images/bg01.jpg');
 		background-position: left center;
 	}
+
 	14.999% {
 		background-image: url('../../images/bg01.jpg');
 		background-position: 30% center;
 	}
+
 	15% {
 		background-image: url('../../images/Regulation-Web3-REG3.webp');
 		background-position: left center;
 	}
+
 	29.999% {
 		background-image: url('../../images/Regulation-Web3-REG3.webp');
 		background-position: center center;
 	}
+
 	30% {
 		background-image: url('../../images/stablecoins-interview.webp');
 		background-position: 40% center;
 	}
+
 	44.999% {
 		background-image: url('../../images/stablecoins-interview.webp');
 		background-position: 57% center;
 	}
+
 	45% {
 		background-image: url('../../images/CNAM-Amphitheater.webp');
 		background-position: 50% center;
 	}
+
 	54.999% {
 		background-image: url('../../images/CNAM-Amphitheater.webp');
 		background-position: 40% center;
 	}
+
 	55% {
 		background-image: url('../../images/xavier-stablecoin-summit.webp');
 		background-position: left center;
 	}
+
 	64.999% {
 		background-image: url('../../images/xavier-stablecoin-summit.webp');
 		background-position: 45% center;
 	}
+
 	65% {
 		background-image: url('../../images/haciendas.webp');
 		background-position: 38% center;
 	}
+
 	74.999% {
 		background-image: url('../../images/haciendas.webp');
 		background-position: 55% center;
 	}
+
 	75% {
 		background-image: url('../../images/conference-digital-assets-sovereignty-small.webp');
 		background-position: 22% center;
 	}
+
 	89.999% {
 		background-image: url('../../images/conference-digital-assets-sovereignty-small.webp');
 		background-position: 5% center;
 	}
+
 	90% {
 		background-image: url('../../images/bg01.jpg');
 		background-position: left center;
 	}
+
 	100% {
 		background-image: url('../../images/bg01.jpg');
 		background-position: left center;
